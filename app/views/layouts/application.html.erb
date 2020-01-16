@@ -10,7 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <%# ヘッダー文をPaddingで空ける。 %>
+  <body class="bg-light" style="padding-top:4.5rem;">
+    <%= render "layouts/header" %>
     <%= yield %>
   </body>
 </html>

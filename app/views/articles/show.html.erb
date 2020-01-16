@@ -1,2 +1,17 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+
+<div class='container bg-white'>
+  <div>
+    <%= image_tag "cat.jpg", class: "img-fluid rounded-top" %>
+    <h1 class="text-center"><%= @article.title %></h1>
+    <h1 class="text-center"><%= @article.body %></h1>
+    <%= @article.created_at.strftime("%Y年%m月%d日 %H時%M分%S秒") %>
+  </div>
+  <p>Find me in app/views/articles/show.html.erb</p>
+  <form class="form-inline">
+    <%= link_to "Index", articles_path, class:"btn btn-outline-secondary" %>
+    <%# 「edit_article_path(@article)」は「edit_article_url」に書き換え可能。 %>
+    <%= link_to "Edit", edit_article_path(@article), class:"btn btn-outline-success" %>
+    <%= link_to "Delete", article_path(@article), method: 'delete', class:"btn btn-outline-danger" %>
+    <%# <button type="button" class="btn btn-sm ml-2 btn-outline-danger">削除</button> %>
+  </form>
+</div>
