@@ -1,3 +1,14 @@
-<h1>OkamotoArticles#index</h1>
-<div>一覧が入ります！！！</div>
-<p>Find me in app/views/articles/index.html.erb</p>
+
+<div class='container bg-white'>
+  <h1 class="text-center">OkamotoArticles#index</h1>
+  <% @articles.each do |article| %>
+    <%= link_to article do %>
+      <div class="col-sm-3 d-inline-block rounded article-material">
+        <%= image_tag "cat.jpg", class: "img-fluid rounded-top" %>
+        <p class='font-bold'> <%= article.title %> </p>
+        <%= article.created_at.strftime("%Y年%m月%d日 %H時%M分%S秒") %>
+      </div>
+    <%end%>
+  <%end%>
+  <p>Find me in app/views/articles/index.html.erb</p>
+</div>
