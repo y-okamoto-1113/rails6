@@ -23,13 +23,18 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+# ActionTextで使うTrim（WYSIWYG）で画像をドラッグ&ドロップしてアップロードする際に、ActiveStorageを使う。
+# また、アップロードした画像の変換に以下のGemが必要
+gem 'image_processing', '~> 1.2'
+
+gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'sqlite3'
+  # gem "mysql2"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
