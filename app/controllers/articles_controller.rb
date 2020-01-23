@@ -3,15 +3,11 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order(created_at: :desc)
-    # IndexでActionTextを使ったデータ（今回はbodyカラムに入ってる）を表示する場合にEachを使うと「N+1問題」が起きる。
-    # なぜなら、ActionTextを使ったTextは別テーブルに保存され、ドラッグ&ドロップで入れた画像はActiveStorageに保存されるからである。
-
-    # @articles = Article.order(created_at: :desc).with_rich_text_body
   end
 
   def show
   end
-  
+
   def new
     @article = Article.new
   end
