@@ -12,6 +12,9 @@
 
   <%# ヘッダー文をPaddingで空ける。 %>
   <body class="bg-light" style="padding-top:4.5rem;">
+    <!-- deviseのおかげでフラッシュメッセージ使える -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render "layouts/header" %>
     <%= yield %>
   </body>
