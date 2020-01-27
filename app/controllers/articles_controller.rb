@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
+  before_action :sign_in_required, only: [:show]
 
   def index
+    # binding.pry
     @articles = Article.order(created_at: :desc)
   end
 
