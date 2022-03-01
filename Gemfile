@@ -25,7 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Active Storage variant
 # ActionTextで使うTrim（WYSIWYG）で画像をドラッグ&ドロップしてアップロードする際に、ActiveStorageを使う。
 # また、アップロードした画像の変換に以下のGemが必要
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 gem 'devise'
 
